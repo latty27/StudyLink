@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offer Help | StudyLink</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h2>StudyLink</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="find-tutors.html">Find a Tutor</a></li>
+                <li><a href="offer-help.html">Offer Help</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-container">
+
+        <section class="page-heading">
+            <h1>Share Your Knowledge</h1>
+            <p>Help fellow students improve their academic performance by offering your skills.</p>
+        </section>
+
+        <section class="form-section">
+
+            <h2>Register as a Peer Tutor</h2>
+
+            <form id="tutorForm">
+
+                <div class="form-group">
+                    <label for="studentName">Full Name</label>
+                    <input type="text" id="studentName"
+                           name="studentName"
+                           placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="registrationNumber">Registration Number</label>
+                    <input type="text" id="registrationNumber"
+                           name="registrationNumber"
+                           placeholder="Enter your registration number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email"
+                           name="email"
+                           placeholder="Enter your email address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject You Can Teach</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select a subject</option>
+                        <option value="Programming">Programming</option>
+                        <option value="Mathematics">Mathematics</option>
+                        <option value="Networking">Networking</option>
+                        <option value="Database">Database Systems</option>
+                        <option value="Web Development">Web Development</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="studyLevel">Year of Study</label>
+                    <select id="studyLevel" name="studyLevel" required>
+                        <option value="">Select your year</option>
+                        <option value="First Year">First Year</option>
+                        <option value="Second Year">Second Year</option>
+                        <option value="Third Year">Third Year</option>
+                        <option value="Fourth Year">Fourth Year</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="availability">Availability</label>
+                    <select id="availability" name="availability" required>
+                        <option value="">Select availability</option>
+                        <option value="Morning">Morning</option>
+                        <option value="Afternoon">Afternoon</option>
+                        <option value="Evening">Evening</option>
+                        <option value="Weekends">Weekends</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Briefly Describe Your Skills</label>
+                    <textarea id="description" name="description"
+                              rows="5"
+                              placeholder="Describe what you can help other students with..."
+                              required></textarea>
+                </div>
+
+                <button type="submit" class="btn">Submit Registration</button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 StudyLink. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

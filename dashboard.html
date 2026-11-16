@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | StudyLink</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h2>StudyLink</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="find-tutors.html">Find a Tutor</a></li>
+                <li><a href="offer-help.html">Offer Help</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-container">
+
+        <section class="page-heading">
+            <h1>Student Dashboard</h1>
+            <p>Welcome back! Here is an overview of your learning activities.</p>
+        </section>
+
+        <section class="dashboard-summary">
+
+            <div class="summary-card">
+                <h3>Study Sessions</h3>
+                <p class="summary-number" id="sessionCount">0</p>
+                <p>Accepted sessions</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Pending Requests</h3>
+                <p class="summary-number" id="pendingCount">0</p>
+                <p>Requests awaiting response</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Subjects</h3>
+                <p class="summary-number" id="subjectCount">0</p>
+                <p>Subjects you are learning</p>
+            </div>
+
+        </section>
+
+        <section class="dashboard-section">
+
+            <h2>My Study Activity</h2>
+
+            <div id="activityList"></div>
+
+            <p id="noActivitiesMessage">
+                You have not made any study requests yet.
+            </p>
+
+        </section>
+
+        <section class="dashboard-section">
+
+            <h2>Quick Actions</h2>
+
+            <a href="find-tutors.html" class="btn">Find a Tutor</a>
+
+            <a href="offer-help.html" class="btn">Offer Academic Help</a>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 StudyLink. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

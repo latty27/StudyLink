@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Tutor | StudyLink</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h2>StudyLink</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="find-tutors.html">Find a Tutor</a></li>
+                <li><a href="offer-help.html">Offer Help</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-container">
+
+        <section class="page-heading">
+            <h1>Find a Study Partner</h1>
+            <p>Connect with fellow students who can help you understand your subjects.</p>
+        </section>
+
+        <section class="search-section">
+
+            <h2>Search for Academic Help</h2>
+
+            <div class="search-controls">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search by subject or tutor name"
+                >
+
+                <select id="subjectFilter">
+                    <option value="">All Subjects</option>
+                    <option value="Programming">Programming</option>
+                    <option value="Mathematics">Mathematics</option>
+                    <option value="Networking">Networking</option>
+                    <option value="Database Systems">Database Systems</option>
+                    <option value="Web Development">Web Development</option>
+                </select>
+
+                <button class="btn" type="button" id="searchButton">
+                    Search
+                </button>
+
+            </div>
+
+        </section>
+
+        <section class="tutor-section">
+
+            <h2>Available Tutors</h2>
+
+            <div class="tutor-grid" id="tutorGrid">
+                <!-- Tutor profiles are displayed using JavaScript -->
+            </div>
+
+            <p id="noTutorsMessage" style="display:none;">
+                No tutors found. Try another name or subject.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 StudyLink. All Rights Reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

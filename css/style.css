@@ -1,0 +1,831 @@
+/* GENERAL PAGE STYLING */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fb;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* HEADER AND NAVIGATION */
+header {
+    background-color: #142d4e;
+    padding: 20px 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    color: white;
+    font-size: 26px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #64b5f6;
+}
+
+/* HERO SECTION - IMAGE LEFT, TEXT RIGHT */
+.hero {
+    background-color: #e8f1fc;
+    padding: 65px 7%;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    color: #142d4e;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    background-color: #1769aa;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0d4778;
+}
+
+/* ABOUT SECTION */
+.about {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.about h2,
+.how-it-works h2 {
+    color: #142d4e;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+}
+
+/* HOW IT WORKS SECTION */
+.how-it-works {
+    text-align: center;
+    padding: 60px 30px;
+}
+
+.how-it-works div {
+    display: inline-block;
+    background-color: white;
+    padding: 25px;
+    margin: 10px;
+    width: 260px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* FOOTER */
+footer {
+    background-color: #142d4e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* RESPONSIVE DESIGN FOR SMALL SCREENS */
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .hero-image,
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-image img {
+        height: 300px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .how-it-works div {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+/* ==========================================
+   STUDYLINK - DASHBOARD STYLING
+   ========================================== */
+
+.dashboard-summary {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin: 30px 0;
+}
+
+.summary-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid #e8edf5;
+    box-shadow: 0 5px 18px rgba(25, 55, 90, 0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.summary-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 9px 24px rgba(25, 55, 90, 0.10);
+}
+
+.summary-card h3 {
+    color: #718096;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.summary-number {
+    color: #1769aa;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.dashboard-section {
+    background: #ffffff;
+    padding: 26px;
+    border-radius: 14px;
+    margin-bottom: 24px;
+    border: 1px solid #e8edf5;
+    box-shadow: 0 5px 18px rgba(25, 55, 90, 0.05);
+}
+
+.dashboard-section h2 {
+    color: #142d4e;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.activity-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 17px 5px;
+    border-bottom: 1px solid #edf0f5;
+}
+
+.activity-card:last-child {
+    border-bottom: none;
+}
+
+.activity-card h3 {
+    color: #26364a;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.activity-card p {
+    color: #7b8796;
+    font-size: 13px;
+}
+
+.status {
+    padding: 6px 13px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.status.accepted {
+    background: #e0f6e9;
+    color: #16834b;
+}
+
+.status.pending {
+    background: #fff2d6;
+    color: #a56b00;
+}
+
+.status.declined {
+    background: #ffe5e5;
+    color: #c03939;
+}
+
+
+/* ==========================================
+   STUDYLINK - FIND TUTORS STYLING
+   ========================================== */
+
+.search-section {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 14px;
+    margin: 25px 0 30px;
+    border: 1px solid #e8edf5;
+    box-shadow: 0 5px 18px rgba(25, 55, 90, 0.05);
+}
+
+.search-controls {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+#searchInput,
+#subjectFilter {
+    padding: 13px 15px;
+    border: 1px solid #dce4ef;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    background: #ffffff;
+    color: #26364a;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#searchInput {
+    flex: 2;
+    min-width: 0;
+}
+
+#subjectFilter {
+    flex: 1;
+    min-width: 150px;
+}
+
+#searchInput:focus,
+#subjectFilter:focus {
+    border-color: #2684cf;
+    box-shadow: 0 0 0 3px rgba(38, 132, 207, 0.12);
+}
+
+.tutor-section {
+    margin-top: 30px;
+}
+
+.tutor-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.tutor-card {
+    background: #ffffff;
+    padding: 25px 20px;
+    border-radius: 14px;
+    text-align: center;
+    border: 1px solid #e8edf5;
+    box-shadow: 0 5px 18px rgba(25, 55, 90, 0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tutor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(25, 55, 90, 0.11);
+}
+
+.tutor-card img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #e5f1fc;
+}
+
+.tutor-card h3 {
+    color: #142d4e;
+    font-size: 17px;
+    margin-bottom: 7px;
+}
+
+.tutor-card p {
+    color: #718096;
+    font-size: 14px;
+    margin-bottom: 9px;
+}
+
+.tutor-card .subject {
+    color: #1769aa;
+    font-weight: 600;
+}
+
+.tutor-card button {
+    background: #1769aa;
+    color: white;
+    padding: 11px 20px;
+    border-radius: 8px;
+    margin-top: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.tutor-card button:hover {
+    background: #104d80;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(23, 105, 170, 0.2);
+}
+
+
+/* ==========================================
+   STUDYLINK - OFFER HELP STYLING
+   ========================================== */
+
+.form-section {
+    max-width: 760px;
+    margin: 30px auto;
+    padding: 32px;
+    background: #ffffff;
+    border-radius: 15px;
+    border: 1px solid #e8edf5;
+    box-shadow: 0 6px 22px rgba(25, 55, 90, 0.07);
+}
+
+.form-section h2 {
+    color: #142d4e;
+    font-size: 22px;
+    margin-bottom: 22px;
+}
+
+#tutorForm {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 19px;
+}
+
+.form-group label {
+    display: block;
+    color: #34465c;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #dce4ef;
+    border-radius: 8px;
+    background: #fbfcfe;
+    color: #26364a;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2684cf;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(38, 132, 207, 0.12);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#tutorForm button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 9px;
+    background: #1769aa;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(23, 105, 170, 0.15);
+}
+
+#tutorForm button:hover {
+    background: #104d80;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 15px rgba(23, 105, 170, 0.2);
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 900px) {
+
+    .tutor-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dashboard-summary {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+
+    .tutor-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .search-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #searchInput,
+    #subjectFilter {
+        width: 100%;
+    }
+
+    .form-section {
+        padding: 22px 18px;
+        margin: 20px auto;
+    }
+
+    .dashboard-section {
+        padding: 19px;
+    }
+
+    .activity-card {
+        align-items: flex-start;
+    }
+}
+/* =================================
+   DASHBOARD STYLING
+================================= */
+
+.dashboard-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.summary-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5eaf5;
+}
+
+.summary-card h3 {
+    color: #234a8b;
+    margin-bottom: 12px;
+}
+
+.summary-number {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2563eb;
+    margin: 10px 0;
+}
+
+.dashboard-section {
+    background: #ffffff;
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.dashboard-section h2 {
+    color: #234a8b;
+    margin-bottom: 20px;
+}
+
+.activity-card {
+    background: #f7f9ff;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border-left: 4px solid #2563eb;
+}
+
+.activity-card h3 {
+    color: #234a8b;
+    margin-bottom: 10px;
+}
+
+.status {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.status.accepted {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status.pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.status.declined {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.dashboard-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+
+/* =================================
+   FIND TUTORS STYLING
+================================= */
+
+.search-section {
+    background: #ffffff;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.search-section h2,
+.tutor-section h2 {
+    color: #234a8b;
+    margin-bottom: 20px;
+}
+
+.search-controls {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.search-controls input,
+.search-controls select {
+    flex: 1;
+    min-width: 180px;
+    padding: 12px;
+    border: 1px solid #ccd5e5;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.tutor-section {
+    margin: 30px 0;
+}
+
+.tutor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.tutor-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5eaf5;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tutor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.tutor-card img {
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.tutor-card h3 {
+    color: #234a8b;
+    margin-bottom: 12px;
+}
+
+.tutor-card p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.tutor-card .btn {
+    margin-top: 12px;
+    width: 100%;
+}
+
+
+/* =================================
+   OFFER HELP FORM STYLING
+================================= */
+
+.form-section {
+    background: #ffffff;
+    max-width: 750px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+}
+
+.form-section h2 {
+    color: #234a8b;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #263b5c;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd5e5;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+#photoPreview {
+    display: block;
+    margin-top: 12px;
+}
+
+#registrationMessage {
+    color: #166534;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+
+/* =================================
+   BUTTON IMPROVEMENTS
+================================= */
+
+.btn {
+    display: inline-block;
+    background: #2563eb;
+    color: #ffffff;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 768px) {
+
+    .dashboard-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .search-controls {
+        flex-direction: column;
+    }
+
+    .search-controls input,
+    .search-controls select {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .tutor-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-section {
+        padding: 20px;
+    }
+
+    .dashboard-section {
+        padding: 18px;
+    }
+
+}
